@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+void PrintMultiplicationTable()
+{
+    unsigned short arry[10][10];
+
+    cout << "    ";
+   for (int i = 1; i <= 10; i++) cout << setw(4) << i;
+    cout << "\n--------------------------------------------\n";
+
+    for (unsigned short i = 0; i < 10; i++)
+    {
+      
+        cout << setw(2) << i + 1 << " |";
+
+        for (unsigned short j = 0; j < 10; j++)
+        {
+            arry[i][j] = (i + 1) * (j + 1);
+
+            printf("%4d", arry[i][j]);
+        }
+        cout << endl;
+    }
+}
+
+
+
+int main()
+{
+    PrintMultiplicationTable();
+}
